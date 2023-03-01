@@ -4,3 +4,7 @@
 
 #Ignore gemfile.lock
 /Gemfile.lock
+
+
+#Ignore schema file
+/db/schema.rb
