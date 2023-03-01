@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
   end
 
   # user lists all their own tasks
-  patch "/tasks/" do
+  patch "/tasks" do
     task = Task.where(user_id: params[:user_id])
     task.to_json
   end
