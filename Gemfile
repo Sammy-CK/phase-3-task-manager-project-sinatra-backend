@@ -7,6 +7,7 @@ gem "sinatra-activerecord", "~> 2.0", ">= 2.0.26"
 gem "require_all", "~> 3.0"
 gem "rack-contrib", "~> 2.3"
 gem "sinatra", "~> 3.0", ">= 3.0.5"
+gem 'faker', '~> 3.1', '>= 3.1.1'
 
 group :development do
   gem "pry", "~> 0.14.2"
