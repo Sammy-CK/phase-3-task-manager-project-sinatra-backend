@@ -1,10 +1,32 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, "application/json"
 
+  configure do
+    enable :cross_origin
+  end
+
+  before do
+    response.headers['Access-Control-Allow-Origin'] = '*'
+  end
+
+  options "*" do
+    response.headers["Access-Control-Allow-Methods"] = "GET, PATCH, PUT, POST, DELETE"
+    response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    200
+  end
+
+
+
+
   # user sign in
   patch "/login" do
     user = User.find_by(name: params[:name], password: params[:password])
+    if !!user
     { isRegistered: "#{!!user}", userId: user.id }.to_json
+    else
+      { isRegistered: "#{!!user}"}.to_json
+    end
   end
 
   # user sign up
