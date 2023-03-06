@@ -17,7 +17,9 @@ class ApplicationController < Sinatra::Base
   end
 
 
-
+  get '/hello' do
+    "hello my brother"
+  end
 
   # user sign in
   patch "/login" do
