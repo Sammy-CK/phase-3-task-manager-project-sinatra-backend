@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-ruby '2.7.4'
+ruby File.read('.ruby-version').strip
 
 gem "sqlite3", "~> 1.6", ">= 1.6.1"
 gem "rake", "~> 13.0", ">= 13.0.6"
