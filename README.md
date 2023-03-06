@@ -5,6 +5,10 @@ This project is a server that allows users to keep track of their tasks easily s
 
 The application has been built with the MVC design pattern.
 
+To use the API use the following path before endpoints
+      https://sammy-sinatra-tasks.onrender.com
+
+
 ## Pre-Requisites
 In order to use this repository you will need the following:
 
